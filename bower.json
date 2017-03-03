@@ -1,0 +1,20 @@
+{
+  "name": "tourism",
+  "description": "tourism",
+  "main": "index.js",
+  "authors": [
+    "abhijeet <kumarabhijeet2991@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Angulargit1220/Tourism",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2"
+  }
+}
