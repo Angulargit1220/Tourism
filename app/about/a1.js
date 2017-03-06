@@ -2,11 +2,11 @@ var application=angular.module('git',['ngRoute']);
 application.config(function($routeProvider) {
 	$routeProvider
 		.when('/taj', {
-			templateUrl: 'about/a1a.html',
+			templateUrl: 'about/place/taj.html',
 			controller: 'aCtrl'
 		})
 		.when('/fort', {
-			templateUrl: 'about/a1b.html',
+			templateUrl: 'about/place/red.html',
 			controller: 'bCtrl'
 		});
 });
