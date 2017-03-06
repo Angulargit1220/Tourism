@@ -10,7 +10,7 @@ a.controller('myCtrl', function($scope,$location) {
 
     $scope.submit=function(x,y)
     {
-        $scope.customStyle1 = {};
+       
         if(x==undefined||y==undefined)
             $location.path('/');
 
