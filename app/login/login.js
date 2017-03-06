@@ -17,7 +17,7 @@ a.controller('myCtrl', function($scope,$location,$http) {
 
 
             else{
-  $location.path('/dashboard');
+  $location.path('/home');
                       
                 }
     }
