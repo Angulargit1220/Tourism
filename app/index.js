@@ -1,14 +1,18 @@
-var application=angular.module('git',['ngRoute']);
-application.config(function($routeProvider)
-{
-    $routeProvider
-        .when('/blog',
-        {
-            // templateUrl:"login/login.html",
-            // controller:"myCtrl"
-			templateUrl:"Blog/blog.html"
-            
 
+var app=angular.module('git',["ngRoute"]);
+app.config(function($routeProvider){
+    $routeProvider
+		.when('/',
+        {
+            templateUrl:"login/login.html",
+            controller:"myCtrl"
         })
-   
-});
+        .when("/home",{
+		  templateUrl:"home/"
+	    })
+		.when('/blog',
+        {
+			templateUrl:"Blog/blog.html"
+        })
+      
+  });
