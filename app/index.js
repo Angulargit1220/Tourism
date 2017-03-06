@@ -1,4 +1,3 @@
-
 var app=angular.module('git',["ngRoute"]);
 app.config(function($routeProvider){
     $routeProvider
@@ -14,3 +13,4 @@ app.config(function($routeProvider){
 		   templateUrl:"Blog/blog.html"
         })
   });
+
