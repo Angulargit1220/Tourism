@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 var a =angular.module('git');
-a.controller('myCtrl', function($scope,$location,$http) {
+a.controller('myCtrl', function($scope,$location) {
 
     $scope.submit=function(x,y)
     {
@@ -21,9 +21,5 @@ a.controller('myCtrl', function($scope,$location,$http) {
                       
                 }
     }
-    $scope.reg=function()
-    {
-        $location.path('/register');
-
-    }
+   
     });
