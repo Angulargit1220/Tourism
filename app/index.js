@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var application=angular.module('git',['ngRoute']);
 application.config(function($routeProvider)
 {

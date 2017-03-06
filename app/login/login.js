@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 var a =angular.module('git');
-a.controller('myCtrl', function($scope,$location,$http,Database) {
+a.controller('myCtrl', function($scope,$location,$http) {
 
     $scope.submit=function(x,y)
     {
@@ -17,32 +17,8 @@ a.controller('myCtrl', function($scope,$location,$http,Database) {
 
 
             else{
-
-            var password=y;
-            var obj;
-
-            Database.getNames().then(function(response) {
-
-                  obj=response.data;
-
-                    for(z in obj)
-                    {
-                        console.log(obj[z].email +"----"+obj[z].password1);
-
-                        if(obj[z].email==x && obj[z].password1==password)
-                        {
-
-                            $location.path('/dashboard');
-                            break;
-                        }
-                        else{
-                           $scope.myVar=true;
-                            $scope.customStyle1.style1 = {"color":"red"};
-                        }
-
-                    }
-                });
-
+  $location.path('/dashboard');
+                      
                 }
     }
     $scope.reg=function()
