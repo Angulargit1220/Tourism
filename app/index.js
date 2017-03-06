@@ -1,3 +1,4 @@
+
 var app=angular.module('git',["ngRoute"]);
 app.config(function($routeProvider){
     $routeProvider
@@ -9,5 +10,7 @@ app.config(function($routeProvider){
         .when("/home",{
 		  templateUrl:"home/"
 	    })
-      
+        .when('/blog',{
+		   templateUrl:"Blog/blog.html"
+        })
   });
