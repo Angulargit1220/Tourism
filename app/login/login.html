@@ -10,16 +10,16 @@
                             <td><input type="email" name="email"
                                        placeholder="enter emailid" ng-model="mail" required="required"
                                        autofocus="autofocus"></td> <br>
-                            <span ng-show=" res.email.$dirty && res.email.$invalid">Email Address is not valid</span><br> <br>
+                            <br> <br>
                             <td><input type="password" ng-model="password"
                                        placeholder="enter password" required="required"
                                        autofocus="autofocus"></td> <br>
 
                             <td><br>
                                 <div class="last">
-                                    <span  ng-style="customStyle1.style1" ng-show="myVar">invalid user name or password</span>
-                               <div> <button class="button" type="submit"  ng-click="submit(mail,password)">login here</button>
-                                 </div> </div></td>
+                                
+                               <button class="button" type="submit"  ng-click="submit(mail,password)">login here</button>
+                                  </div></td>
                         </form>
                 </div>
                 </tr>
