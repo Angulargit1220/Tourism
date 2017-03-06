@@ -13,4 +13,3 @@ app.config(function($routeProvider){
 		   templateUrl:"Blog/blog.html"
         })
   });
-
