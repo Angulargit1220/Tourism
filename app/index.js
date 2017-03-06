@@ -5,9 +5,9 @@ app.config(function($routeProvider){
         {
             templateUrl:"login/login.html",
             controller:"myCtrl"
-        })
+		})
         .when("/home",{
 		  templateUrl:"home/"
-	    })
-      
-  });
+	    });
+    
+});	
