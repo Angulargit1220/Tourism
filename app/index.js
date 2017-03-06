@@ -1,9 +1,17 @@
-var app=angular.module('git',["ngRoute"]);
-app.config(function($routeProvider){
 
+var application=angular.module('git',['ngRoute']);
+application.config(function($routeProvider)
+{
     $routeProvider
-      .when("/contactUs",{
-		  templateUrl:"contactus/contactus.html"
-	  });
-	  
+        .when('/',
+        {
+            templateUrl:"login/login.html",
+            controller:"myCtrl"
+
+        })
+      .when("/home",
+	  {
+		  templateUrl:"home/"
+	  })
+
 });
