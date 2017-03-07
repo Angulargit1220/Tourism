@@ -1,5 +1,5 @@
 var application=angular.module('git',['ngRoute']);
-console.log('bbb');
+
 application.config(function($routeProvider) {
 	$routeProvider
 		.when('/taj', {
