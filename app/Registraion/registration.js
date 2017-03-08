@@ -5,15 +5,10 @@
  * Time: 10:43 AM
  * To change this template use File | Settings | File Templates.
  */
-var app=angular.module('myapp');
-app.controller('mycntrl2',function($scope,User,$location)
-{    $scope.User = new User();
-    var refresh = function() {
 
-        $scope.User = User.query();
-        $scope.User ="";
-    }
-    refresh();
+app.controller('mycntrl2',function($scope,$location)
+{  
+   
     $scope.checkQuestions=function(q,y)
     {
         $scope.customStyle = {};
@@ -38,7 +33,7 @@ app.controller('mycntrl2',function($scope,User,$location)
         }
        else{
             console.log(user);
-            User.save(user);
+          // User.save(user);
         $location.path('/')
         }
     }

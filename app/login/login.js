@@ -25,7 +25,7 @@ a.controller('myCtrl', function($scope,$location) {
     }
 	  $scope.reg=function()
     {
-        $location.path('/register');
+        $location.path('/registartion');
 
     }
        });

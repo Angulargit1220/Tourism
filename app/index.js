@@ -1,4 +1,4 @@
-var app=angular.module('git',["ngRoute"]);
+var app=angular.module('git',["ngRoute","ui.bootstrap"]);
 app.config(function($routeProvider){
     $routeProvider
 		.when('/',{
@@ -16,3 +16,4 @@ app.config(function($routeProvider){
 		   templateUrl:"Blog/blog.html"
         })
   });
+app.service('user')
