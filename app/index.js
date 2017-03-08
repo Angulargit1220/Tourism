@@ -5,6 +5,10 @@ app.config(function($routeProvider){
             templateUrl:"login/login.html",
             controller:"myCtrl"
         })
+		.when('/registartion',{
+            templateUrl:"Registraion/registration.html",
+            controller:"mycntrl2"
+        })
         .when('/home',{
 		  templateUrl:"home/index.html"
 	    })
