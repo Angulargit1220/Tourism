@@ -18,7 +18,8 @@
     "http-server": "^0.9.0"
   },
   "scripts": {
-    "prestart":"npm install",
-    "start":"http-server -a 127.0.0.1 -p 8007 -c-1"
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a 127.0.0.1 -p 8007 -c-1"
   }
 }

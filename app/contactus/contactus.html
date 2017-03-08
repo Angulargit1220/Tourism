@@ -2,24 +2,23 @@
 <style>
 body
 {
-   background-image:url("image/contactus.png");
+   background-image:url("contactus/image/contactus.png");
    background-repeat:no-repeat;
    background-color:lightgreen;
    background-position:right top;
  
 }
-
 </style>
 <body>
-<div style="height:400px;width:500px;background-color:red;margin:auto;">
+<form name="myForm" style="height:400px;width:500px;background-color:red;margin:auto;">
 <div style="margin-left:150px;">
 <h3>Your Information</h3>
 <p>FirstName:<br>
-<input type="text" placeholder="enter FirstName"></p>
+<input type="text" placeholder="enter FirstName" name="FirstName"></p>
 <p>LastName:<br>
-<input type="text" placeholder="enter LastName"></p>
+<input type="text" placeholder="enter LastName" name="LastName"></p>
 <p>Email:<br>
-<input type="email" placeholder="enter email"></p>
+<input type="email" placeholder="enter email" name="Email"></p>
 <p>Country:<br>
 <select>
  <option value="India">India</option>
@@ -33,9 +32,9 @@ body
    <option value="karnataka">karnataka</option>
    <option value="UP">UP</option>
  </select><br><br>
- <input type="submit">
+ <input type="submit" value="submit">
 
 </div>
 
-</div>
+</form>
 </body>
