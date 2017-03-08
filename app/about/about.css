@@ -3,14 +3,14 @@
   .carousel-inner > .item > img, 
    .carousel-inner > .item > a > img { 
     width: 80%; 
-    margin: auto; 
+    margin: center; 
    } 
  
 #test1{
 	margin-top:1px;
 	text-align:left;
 	color:yellow;
-	text-shadow:3px 3px orange;
+	text-shadow:3px 3px red;
 	text-indent: 10px;
 	
 =======

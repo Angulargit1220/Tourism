@@ -17,6 +17,6 @@ app.config(function($routeProvider){
         })
 		.when('/about',{
 		   templateUrl:"about/about.html"
-		})
+		});
 
   });
