@@ -26,15 +26,15 @@ app.controller('mycntrl2',function($scope,$location)
     $scope.submit=function(user)
     {        console.log(user.fname);
 
-        if(user.fname==undefined||user.lname==undefined||user.gender1==undefined|| user.email==undefined|| user.phno==undefined|| user.password1==undefined)
+        if(user.fname==undefined||user.lname==undefined||user.email==undefined|| user.phno==undefined|| user.password1==undefined)
         {
 
-         $location.path('/register')
+         $location.path('/registartion')
         }
        else{
-            console.log(user);
+           // console.log(user);
           // User.save(user);
-        $location.path('/')
+        $location.path('/home');
         }
     }
 
