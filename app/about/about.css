@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   .carousel-inner > .item > img, 
    .carousel-inner > .item > a > img { 
     width: 80%; 
@@ -12,13 +13,23 @@
 	text-shadow:3px 3px orange;
 	text-indent: 10px;
 	
+=======
+body{
+
+>>>>>>> 9c35d4f7f975fb499bf79e761c0318e144725fac
 }
 #test{
 	 background-image:url("/app/image/about1.jpg");
 }
+<<<<<<< HEAD
 
 
 .carousel-caption:hover{
 	background-color:maroon;
 }
 
+=======
+img{
+
+}
+>>>>>>> 9c35d4f7f975fb499bf79e761c0318e144725fac
