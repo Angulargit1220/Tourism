@@ -1,5 +1,5 @@
-app.controller('blog',function($scope,$location, $rootScope)
-{ if($rootScope.user==true)
+app.controller('home',function($scope,$location, $rootScope)
+{ if($rootScope.user)
     {
         console.log("hiiii");
         
