@@ -1,7 +1,7 @@
 app.controller('home',function($scope,$location, $rootScope)
 { if($rootScope.user)
     {
-        console.log("hiiii");
+       alert("welcome to turism.com");
         
     }
  else{

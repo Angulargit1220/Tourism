@@ -8,6 +8,8 @@
 var a =angular.module('git');
 
 a.controller('myCtrl', function($scope,$location,$rootScope) {
+     $rootScope.session1=false;
+      $rootScope.session=false;
 
     $scope.submit=function(x,y)
     {
@@ -20,6 +22,8 @@ a.controller('myCtrl', function($scope,$location,$rootScope) {
 
             else{
  $rootScope.user=true;
+                $rootScope.session=true;
+                 $rootScope.session1=true;
   $location.path('/home');
                       }
         
