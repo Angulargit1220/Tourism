@@ -23,7 +23,7 @@
 
 .register {
     margin: 0 auto;
-    width: 230px;
+    width: 310px;
     padding: 20px;
     background: #f4f4f4;
     border-radius: 3px;
@@ -160,3 +160,21 @@ input {
 .reg{
 	margin-top:10px;
 }
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
