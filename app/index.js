@@ -1,5 +1,6 @@
 var app=angular.module('git',["ngRoute"]);
 app.config(function($routeProvider){
+
     $routeProvider
 		.when('/',
         {
@@ -19,4 +20,10 @@ app.config(function($routeProvider){
 		.when('/about',{
 		   templateUrl:"about/about.html"
 		});
-  });
+  
+        .when("/contactUs",{
+		  templateUrl:"contactus/contactus.html"
+	    });
+	  
+});
+

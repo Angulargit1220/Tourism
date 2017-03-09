@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html ng-app='git'>
-	<head>
-	
-	
+<head>
 	    <!-- meta tags -->
 		<meta http-equiv='pragma' content="no-cache">
 		<meta name='viewport' content="width=device-width,initial-scale=1">
@@ -24,25 +22,28 @@
 		<link rel="stylesheet" href="main.css">
 		<link rel="stylesheet" href="about/about.css">
 		<link rel="stylesheet" href="Blog/blog.css">
+        <link rel="stylesheet" href="contactus/css/contact.css">
 
 		<script src="index.js"></script>
 		<script src="login/login.js"></script>
 		<script src="Registraion/registration.js"></script>
 		<script src="Blog/blog.js"></script>
-
+        <script src="contactus/jqery/contact.js"></script>
+        <script src="about/about.js"></script>
 	</head>
 
-	<body>		<div ng-include="'footer/footer.html'"></div>
+	<body>		
 
 		<div ng-include="'header/header.html'"></div>
 
 		<ng-view></ng-view>
+        
+        <div ng-include="'footer/footer.html'"></div>
 
-
-		<script src="login/login.js"></script>
-		<script src="about/about.js"></script>
 
 	</body>
+
+
 </html>
 
 
