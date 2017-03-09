@@ -1,7 +1,8 @@
-var app=angular.module('git',['ngRoute']);
+var app=angular.module('git',["ngRoute"]);
 app.config(function($routeProvider){
     $routeProvider
-		.when('/',{
+		.when('/',
+        {
             templateUrl:"login/login.html",
             controller:"myCtrl"
         })
@@ -18,5 +19,4 @@ app.config(function($routeProvider){
 		.when('/about',{
 		   templateUrl:"about/about.html"
 		});
-
   });

@@ -1,0 +1,14 @@
+#firstname { 
+       margin-top: 614px;
+	   margin-left:20px;
+	   margin-right:20px;
+}
+#feedback textarea{
+height:90px;
+}
+#feedback button{
+margin-bottom:10px;
+}
+h2{
+text-align:center;
+}

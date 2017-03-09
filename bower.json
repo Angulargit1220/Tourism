@@ -2,9 +2,6 @@
   "name": "tourism",
   "description": "tourism",
   "main": "index.js",
-  "authors": [
-    "abhijeet <kumarabhijeet2991@gmail.com>"
-  ],
   "license": "ISC",
   "homepage": "https://github.com/Angulargit1220/Tourism",
   "ignore": [
@@ -17,7 +14,7 @@
   "dependencies": {
     "angular": "^1.6.2",
     "angular-route": "*",
-    "bootstrap-css": "^3.3.7",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "bootstrap-css": "^3.3.7"
   }
 }
