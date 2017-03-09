@@ -2,8 +2,7 @@ var app=angular.module('git',["ngRoute"]);
 app.config(function($routeProvider){
 
     $routeProvider
-		.when('/',
-        {
+		.when('/',{
             templateUrl:"login/login.html",
             controller:"myCtrl"
         })
@@ -12,18 +11,19 @@ app.config(function($routeProvider){
             controller:"mycntrl2"
         })
         .when('/home',{
-		  templateUrl:"home/index.html"
+		  templateUrl:"home/index.html",
+        controller:"home"
 	    })
         .when('/blog',{
-		   templateUrl:"Blog/blog.html"
+		   templateUrl:"Blog/blog.html",
+        controller:"blog"
         })
 		.when('/about',{
-		   templateUrl:"about/about.html"
+		   templateUrl:"about/about.html",
+           controller:"about"
 		})
-  
         .when("/contactUs",{
 		  templateUrl:"contactus/contactus.html"
 	    });
 	  
 });
-

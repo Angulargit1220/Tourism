@@ -6,8 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 
-app.controller('mycntrl2',function($scope,$location)
-{  
+app.controller('mycntrl2',function($scope,$location, $rootScope)
+{ 
+  
    
     $scope.checkQuestions=function(q,y)
     {
@@ -28,15 +29,17 @@ app.controller('mycntrl2',function($scope,$location)
 
         if(user.fname==undefined||user.lname==undefined||user.email==undefined|| user.phno==undefined|| user.password1==undefined)
         {
-
+         $rootScope.user=false;
          $location.path('/registartion')
         }
        else{
+            $rootScope.user=true;
            // console.log(user);
           // User.save(user);
         $location.path('/home');
         }
     }
 
+    
 
 });
