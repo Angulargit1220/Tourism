@@ -1,8 +1,7 @@
 app.controller('home',function($scope,$location, $rootScope)
 { if($rootScope.user)
     {
-        console.log("hiiii");
-        
+     console.log("welcm");
     }
  else{
      $location.path("/")

@@ -1,11 +1,26 @@
 
-
+ 
 
 #test1{
 	margin-top:1px;
 	text-align:left;
 	color:red;
 	text-indent: 10px;
+	
+}
+.carousel-caption:hover{
+	background-color:black;
+	opacity:1;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+.carousel-caption{
+	background-color:black;
+	opacity:0.5;
 }
 
 .carousel-caption{
@@ -13,10 +28,13 @@
 	opacity:.5;
 }
 
+<<<<<<< HEAD
 .carousel-caption:hover{
 	background-color:black;
 	opacity:1;
 }
+=======
+>>>>>>> 0ff632c7f95e8c949318c39091022246c3e864e8
 
 
  .carousel-inner > .item > img,
