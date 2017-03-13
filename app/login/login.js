@@ -7,21 +7,23 @@
  */
 var a =angular.module('git');
 
-a.controller('myCtrl', function($scope,$location) {
+a.controller('myCtrl', function($scope,$location,$rootScope) {
 
     $scope.submit=function(x,y)
     {
        
         if(x==undefined||y==undefined)
+            {
             $location.path('/');
 
-
+        $rootScope.user=false;}
 
             else{
-
+ $rootScope.user=true;
   $location.path('/home');
-                      
-                }
+                      }
+        
+        
     }
 	  $scope.reg=function()
     {

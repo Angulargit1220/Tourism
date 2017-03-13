@@ -3,12 +3,16 @@
 
 <form class="register" name="register">
     
-
-    <input type="text" name="fname" ng-model="user.fname"  class="register-input" placeholder="first name" required /><br>
+<div class="inner-addon left-addon">
+    <i class="glyphicon glyphicon-user"></i>
+   <input type="text" name="fname" ng-model="user.fname"  class="register-input" placeholder="first name" required />
+</div>
+<br>
   
 
-
-    <input type="text" name="lname" ng-model="user.lname" class="register-input" placeholder="last name" required /><br>
+<div class="inner-addon left-addon">
+    <i class="glyphicon glyphicon-user"></i>
+    <input type="text" name="lname" ng-model="user.lname" class="register-input" placeholder="last name" required /></div><br>
 
 
     <input type="email" name="email" ng-model="user.email" class="register-input" placeholder="Email address" required /><br>
@@ -16,10 +20,7 @@
 
     <input type="number" name="phno" ng-model="user.phno" class="register-input"  ng-minlength="10"
            ng-maxlength="10" placeholder="phone number" ng-required="true" /><br>
-    
-     
-
-    <input type="password" name="password" ng-model="password" class="register-input" placeholder="Password" required /><br>
+       <input type="password" name="password" ng-model="password" class="register-input" placeholder="Password" required /><br>
     <input type="password" name="password1"  ng-model="user.password1" class="register-input" placeholder=" confirm Password" ng-required/><br>
     <div ng-show="register.password1.$viewValue != '' && (register.password1.$viewValue != register.password.$viewValue)">Fields do not match!</div>
 
