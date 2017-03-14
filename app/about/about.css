@@ -1,29 +1,22 @@
-
- 
-
-#test1{
-	margin-top:1px;
-	text-align:left;
-	color:red;
-	text-indent: 10px;
-	
+#test1 {
+    margin-top: 1px;
+    text-align: left;
+    color: red;
+    text-indent: 10px;
 }
-.carousel-caption:hover{
-	background-color:black;
-	opacity:1;
+
+.carousel-caption:hover {
+    background-color: black;
+    opacity: 1;
 }
 
 .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
-.carousel-caption{
-	background-color:black;
-	opacity:0.5;
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
 }
 
-
-
-
-
+.carousel-caption {
+    background-color: black;
+    opacity: 0.5;
+}
