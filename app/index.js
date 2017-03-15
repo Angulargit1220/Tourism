@@ -14,6 +14,7 @@ app.config(function ($routeProvider) {
             templateUrl: "home/index.html",
             controller: "home"
         })
+
         .when('/blog', {
             templateUrl: "Blog/blog.html",
             controller: "blog"
@@ -29,7 +30,7 @@ app.config(function ($routeProvider) {
 });
 
 
-app.run(run);
+/*app.run(run);
  run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];
     function run($rootScope, $location, $cookieStore, $http) {
         // keep user logged in after page refresh
@@ -45,4 +46,5 @@ app.run(run);
             if (restrictedPage && !loggedIn) {
                 $location.path('/login');
             }
-        });
+        });*/
+

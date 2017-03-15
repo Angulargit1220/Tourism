@@ -35,7 +35,7 @@ app.controller('mycntrl2', function ($scope, $location, $rootScope) {
             $rootScope.user = true;
             // console.log(user);
             // User.save(user);
-            $location.path('/home');
+            $location.path('/');
         }
     }
 
