@@ -25,7 +25,7 @@ app.controller('home', function ($scope, $location, $http, $rootScope, $timeout)
         $rootScope.$broadcast('eventName', {
             obj: obj
         },console.log('Broadcasting',console.time('t')));
-        },10);
+        },80);
        $location.path("/detail");
     };
                                                                                   

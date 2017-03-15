@@ -21,10 +21,6 @@ app.config(function($routeProvider){
 		.when('/about',{
 		   templateUrl:"about/about.html",
            controller:"about"
-<<<<<<< HEAD
-		});
-  });
-=======
 		})
         .when('/detail',{
 		   templateUrl:"home/detail.html",
@@ -35,4 +31,3 @@ app.config(function($routeProvider){
 	    });
 	  
 });
->>>>>>> 0ff632c7f95e8c949318c39091022246c3e864e8

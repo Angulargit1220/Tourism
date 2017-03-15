@@ -504,9 +504,10 @@ section#content footer#msf {
 }
 
 footer#msf .wrapper {
+    background-color:  black
     border-top: 1px solid #e4e4e4;
     height: 73px;
-    margin: 0 60px
+    padding: 0 60px
 }
 
 footer#msf ul#lets-be-social {
