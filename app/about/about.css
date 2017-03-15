@@ -23,22 +23,3 @@
 	opacity:0.5;
 }
 
-.carousel-caption{
-	background-color:black;
-	opacity:.5;
-}
-
-<<<<<<< HEAD
-.carousel-caption:hover{
-	background-color:black;
-	opacity:1;
-}
-=======
->>>>>>> 0ff632c7f95e8c949318c39091022246c3e864e8
-
-
- .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }

@@ -21,14 +21,14 @@ app.config(function($routeProvider){
 		.when('/about',{
 		   templateUrl:"about/about.html",
            controller:"about"
-<<<<<<< HEAD
-		});
-  });
-=======
+
 		})
+		
         .when("/contactUs",{
 		  templateUrl:"contactus/contactus.html"
-	    });
+	    })
+  });
+
 	  
-});
->>>>>>> 0ff632c7f95e8c949318c39091022246c3e864e8
+
+
