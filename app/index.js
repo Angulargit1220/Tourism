@@ -26,9 +26,7 @@ app.config(function ($routeProvider) {
         })
         .when("/contactUs", {
             templateUrl: "contactus/contactus.html"
-        });
-
-
+        })
         .when('/detail',{
 		   templateUrl:"home/detail.html",
            controller:"detail"
