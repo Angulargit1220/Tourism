@@ -6,40 +6,39 @@
  * To change this template use File | Settings | File Templates.
  */
 
-app.controller('mycntrl2',function($scope,$location, $rootScope)
-{ 
-  
-   
-    $scope.checkQuestions=function(q,y)
-    {
-        $scope.customStyle = {};
-        if (q!=y) {
+app.controller('mycntrl2', function ($scope, $location, $rootScope) {
 
-            $scope.customStyle.style = {"color":"red"};
+
+    $scope.checkQuestions = function (q, y) {
+        $scope.customStyle = {};
+        if (q != y) {
+
+            $scope.customStyle.style = {
+                "color": "red"
+            };
 
             return true;
-        }
-        else {
-            $scope.customStyle.style = {"color":"green"};
+        } else {
+            $scope.customStyle.style = {
+                "color": "green"
+            };
             return false;
         }
     }
-    $scope.submit=function(user)
-    {        console.log(user.fname);
+    $scope.submit = function (user) {
+        console.log(user.fname);
 
-        if(user.fname==undefined||user.lname==undefined||user.email==undefined|| user.phno==undefined|| user.password1==undefined)
-        {
-         $rootScope.user=false;
-         $location.path('/registartion')
-        }
-       else{
-            $rootScope.user=true;
-           // console.log(user);
-          // User.save(user);
-        $location.path('/home');
+        if (user.fname == undefined || user.lname == undefined || user.email == undefined || user.phno == undefined || user.password1 == undefined) {
+            $rootScope.user = false;
+            $location.path('/registartion')
+        } else {
+            $rootScope.user = true;
+            // console.log(user);
+            // User.save(user);
+            $location.path('/');
         }
     }
 
-    
+
 
 });

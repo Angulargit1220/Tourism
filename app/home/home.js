@@ -1,5 +1,8 @@
+
 var app = angular.module('git');
-app.controller('home', function ($scope, $location, $http, $rootScope, $timeout) {console.time('t'); 
+app.controller('home', function ($scope, $location, $http, $rootScope, $timeout) 
+               {
+    console.time('t'); 
                                                             
     if ($rootScope.user) {
         console.log("welcm");
@@ -33,5 +36,5 @@ app.controller('home', function ($scope, $location, $http, $rootScope, $timeout)
               alert(2);
                  $rootScope.$broadcast('starter2',null,alert(3));
             }) */                                                                   
-    
+
 });

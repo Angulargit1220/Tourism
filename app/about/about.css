@@ -1,28 +1,27 @@
-
- 
-
-#test1{
-	margin-top:1px;
-	text-align:left;
-	color:red;
-	text-indent: 10px;
-	
+#test1 {
+    margin-top: 1px;
+    text-align: left;
+    color: red;
+    text-indent: 10px;
 }
-.carousel-caption:hover{
-	background-color:black;
-	opacity:1;
+
+.carousel-caption:hover {
+    background-color: black;
+    opacity: 1;
 }
 
 .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
-.carousel-caption{
-	background-color:black;
-	opacity:0.5;
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
 }
 
+<<<<<<< HEAD
+.carousel-caption {
+    background-color: black;
+    opacity: 0.5;
+}
+=======
 .carousel-caption{
 	background-color:black;
 	opacity:.5;
@@ -42,3 +41,4 @@
       width: 70%;
       margin: auto;
   }
+>>>>>>> 39f15aaa24dc8ae0995806c9ec223024455d9843

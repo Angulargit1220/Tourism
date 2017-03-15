@@ -1,10 +1,8 @@
-app.controller('about',function($scope,$location, $rootScope)
-{ if($rootScope.user==true)
-    {
+app.controller('about', function ($scope, $location, $rootScope) {
+    if ($rootScope.user == true) {
         console.log("hiiii");
-        
+
+    } else {
+        $location.path("/")
     }
- else{
-     $location.path("/")
- }
 });
