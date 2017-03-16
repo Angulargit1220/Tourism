@@ -1,108 +1,32 @@
-<!DOCTYPE html>
-<html class="no-js">
-<head>
 
+<div id="container" style="left: 0px;">
+    <section id="content">
 
-    <!-- Meta info -->
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourism</title>
-    <meta content="" name="description">
-    <meta name="author" content="">
-    <meta name="format-detection" content="">
-
-    <!-- Styles -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-    <link href="styles/main.css" rel="stylesheet" media="screen, print" type="text/css">
-    <script src="lib/modernizr-2.6.2.js"></script>
-</head>
-<body>
-    <div id="container" style="left: 0px;">
-        <section id="content">
-            
-<header>
-    <div id="">
-        <a href="index.html">
-            <img src="home/images/pyaari-logo.jpg" alt="Pyaari Website - For Website and Graphic Designers">
-        </a>
-    </div>
-    <div id="preamble" class="home">
-        <div class="preamble">
-	<h1>
+        <header>
+            <div id="">
+                <a href="index.html">
+                    <img src="image/home/logo.jpg">
+                </a>
+            </div>
+            <div id="preamble" class="home">
+                <div class="preamble">
+                    <h1>
 		Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, it’s a gateway for skiing in the Solang Valley and trekking in Parvati Valley. It's also a jumping-off point for paragliding, rafting and mountaineering in the Pir Panjal mountains, home to 4,000m-high Rohtang Pass.</h1>
-    </div>
-</header>
-<div id="our-work">
-    <ul>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-1.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Manali</h2><h3>Pencil work, Adobe illustrator</h3></summary><div class="loves"><span>77</span></div></div></a></li>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-2.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Ladakh</h2><h3>Identity, Website &amp; Photography</h3></summary><div class="loves"><span>22</span></div></div></a></li>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-3.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Konark</h2><h3>Website &amp; Brandind</h3></summary><div class="loves"><span>12</span></div></div></a></li>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-4.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Puri</h2><h3>Pencil work, Adobe illustrator</h3></summary><div class="loves"><span>77</span></div></div></a></li>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-5.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Bhitarkanika National Park</h2><h3>Identity, Website &amp; Photography</h3></summary><div class="loves"><span>22</span></div></div></a></li>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-6.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Chilika Lake</h2><h3>Website &amp; Brandind</h3></summary><div class="loves"><span>12</span></div></div></a></li>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-7.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Western Ghats</h2><h3>Website &amp; Brandind</h3></summary><div class="loves"><span>12</span></div></div></a></li><br>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-8.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Chitradurga fort</h2><h3>Pencil work, Adobe illustrator</h3></summary><div class="loves"><span>77</span></div></div></a></li>
-<li><a href="project-detail-page.html"><img src="home/images/work/project-9.jpg" alt="Pyaari"><div class="overlay"><summary><h2>Jog falls</h2><h3>Identity, Website &amp; Photography</h3></summary><div class="loves"><span>22</span></div></div></a></li>
-
-
-</ul>
-</div>
-</section>
-
-       <footer id="msf">
-            <div class="wrapper">
-                <ul id="lets-be-social">
-                    <li>
-                        <a href="https://twitter.com/198sevenblog" rel="external" target="_blank" title="Follow 198seven on Twitter">Twitter.</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/198sevenblog" rel="external" target="_blank" title="Be 198seven Facebook friend">Facebook.</a>
-                    </li>
-                    <li>
-                        <a href="http://www.pinterest.com/198seven" rel="external" target="_blank" title="My Pinterest pins">Pinterest.</a>
-                    </li>
-                </ul>
-                
-                <div id="legal">
-                	<span>Handcrafted by<br>198seven &copy; Angular Guys</span>
                 </div>
-                
-            </div><!-- wrapper -->
-        </footer><!-- footer -->
-    </div><!-- container -->
-    
-    
-    <nav id="toc">
-        <ul>
-            <li>
-                <a class="" href="index.html">Work.</a></li>
-            <li>
-                <a href="">About.</a></li>
-            <li>
-                <a href="">What we do.</a></li>
-        </ul>
-	</nav>
-       
-       
+        </header>
+        <div id="our-work">
+            <ul>
+                <li ng-repeat="x in obj" ng-click=detail(x)>
+                    <a href=""><img src={{x.img_path}}>
+                        <div class="overlay">
+                            <summary>
+                                <h2>{{x.name}}</h2></summary>
+                            <div class="loves"><span>77</span></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    </div>
 
-    
-    
-    <script src="ajax/jquery-1.11.0.min.js"></script>
-    <script src="scripts/pyaari-main.1.0.js"></script>
-    <script src="scripts/pyaari-menu.1.0.js"></script>
-    <script>
-        $(document).ready(function () {
-            PfdMenu._ctor();
-        });
-    </script>
-    
-
-    <script>
-    	$(document).ready(function(){
-	       ReadMore.init();
-    	})
-    </script>
-
-
-</body>
-</html>

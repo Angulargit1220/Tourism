@@ -1,29 +1,44 @@
 
-        <div class="div" style="margin-top:20px;">
-            <p id="para" style="font-size:large;margin-top:28px;">Sign in to continue</p>
-            <div id="div2">
+<div class="div" style="margin-top:20px;height:initial;margin-bottom:275px">
+    <p id="para" style="font-size:large;margin-top:28px;">Sign in to continue</p>
+    <div id="div2">
 
-                <tr>
-                    <div>
-                        <form name="res">
-                            <td><input type="email" name="email"
-                                       placeholder="enter emailid" ng-model="mail" required="required"
-                                       autofocus="autofocus"></td> <br>
+        <tr>
+            <div>
 
-                            <br> <br>
-                            <td><input type="password" ng-model="password"
-                                       placeholder="enter password" required="required"
-                                       autofocus="autofocus"></td> <br>
+                <td>
+                    <div class="inner-addon left-addon">
+                        <i class="glyphicon glyphicon-user" style="left:64px"></i>
+                        <input type="email" name="email" placeholder="enter emailid" ng-model="mail" required="required" autofocus="autofocus">
+                    </div>
+                </td>
+                <br>
 
-                            <td><br>
-                                <div class="last">
+                <br>
+                <td>
+                    <div class="inner-addon left-addon">
+                        <i class="glyphicon glyphicon-hand-right" style="left:64px"></i>
+                        <input type="password" ng-model="password" placeholder="enter password" required="required" autofocus="autofocus">
+                    </div>
+                </td>
+                <br>
 
-                                
-                               <button class="button" type="submit"  ng-click="submit(mail,password)">login here</button>
-                                  </div></td>
-                        </form>
-                </div>
-                </tr>
-            
-        </div></div>
+                <td>
+                    <br>
+                    <div class="last">
 
+
+
+                        <button class="button" type="submit" ng-click="submit(mail,password)" style="margin-top:-5px">login </button>
+                        <button class="button" ng-click="reg()">New user</button>
+                        <br>
+
+
+                    </div>
+                </td>
+
+            </div>
+        </tr>
+
+    </div>
+</div>
