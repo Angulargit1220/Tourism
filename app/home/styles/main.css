@@ -599,6 +599,17 @@ nav#toc a#toc-actuator {
     width: 34px;
     z-index: 5000
 }
+#a{
+    margin-left: 1300px;
+  }
+#b{
+    display:none;
+    margin-left: 1300px;
+    
+}
+#a:hover a#b{
+    display:block;
+}
 
 @media screen and (max-width:1200px) {
     footer#msf .wrapper {
