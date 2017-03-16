@@ -17,14 +17,13 @@ a.controller('myCtrl', function($scope,$location,$rootScope) {
         if(x==undefined||y==undefined)
             {
             $location.path('/');
-
         $rootScope.user=false;}
 
             else{
- $rootScope.user=true;
+                $rootScope.user=true;
                 $rootScope.session=true;
-                 $rootScope.session1=true;
-  $location.path('/home');
+                $rootScope.session1=true;
+                $location.path('/home');
                       }
         
         
