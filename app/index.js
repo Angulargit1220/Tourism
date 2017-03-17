@@ -45,3 +45,12 @@ app.factory('mongoAPI', function ($resource) {
         }
     });
 });
+app.factory('mongoHomeAPI', function ($resource) {
+    return $resource('/homeapi/homedata/:id', {
+        id: '@_id'
+    }, {
+        update: { // We need to define this method manually as it is not provided with ng-resource
+            method: 'PUT'
+        }
+    });
+});

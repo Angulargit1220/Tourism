@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-app.controller('mycntrl2', function ($scope, $location, $rootScope, mongoAPI) {
+app.controller('mycntrl2', function ($scope, $location, $rootScope, mongoAPI, mongoHomeAPI) {
     $scope.checkQuestions = function (q, y) {
         $scope.customStyle = {};
         if (q != y) {
@@ -26,6 +26,11 @@ app.controller('mycntrl2', function ($scope, $location, $rootScope, mongoAPI) {
 
     $scope.registerpage = function (data) {
         mongoAPI.save(data);
+        $location.path('/');
+    }
+    $scope.registerpage2 = function (data) {
+        alert(1);
+        mongoHomeAPI.save(data);
         $location.path('/');
     }
 
