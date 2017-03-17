@@ -1,4 +1,4 @@
-var app = angular.module('git', ["ngRoute", "ngCookies"]);
+var app = angular.module('git', ["ngRoute", "ngCookies", "ngResource"]);
 app.config(function ($routeProvider) {
 
     $routeProvider
@@ -16,7 +16,7 @@ app.config(function ($routeProvider) {
         })
 
 
-        .when('/blog', {
+    .when('/blog', {
             templateUrl: "Blog/blog.html",
             controller: "blog"
         })
@@ -27,11 +27,21 @@ app.config(function ($routeProvider) {
         .when("/contactUs", {
             templateUrl: "contactus/contactus.html"
         })
-        .when('/detail',{
-		   templateUrl:"home/detail.html",
-           controller:"detail"
-		})
-        
-	  
+        .when('/detail', {
+            templateUrl: "home/detail.html",
+            controller: "detail"
+        })
+
+
 });
 
+
+app.factory('mongoAPI', function ($resource) {
+    return $resource('/api/data/:id', {
+        id: '@_id'
+    }, {
+        update: { // We need to define this method manually as it is not provided with ng-resource
+            method: 'PUT'
+        }
+    });
+});
