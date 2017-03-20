@@ -1,6 +1,6 @@
 app.controller('blog', function ($scope, $location, $rootScope) {
-    if ($rootScope.user == true) {
-        console.log("hiiii");
+    if ($rootScope.headerhide == true) {
+       
 
     } else {
         $location.path("/")

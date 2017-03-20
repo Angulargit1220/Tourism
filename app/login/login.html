@@ -1,6 +1,10 @@
-
-<div class="div" style="margin-top:20px;height:initial;margin-bottom:275px">
-    <p id="para" style="font-size:large;margin-top:28px;">Sign in to continue</p>
+<div class="div" style="background-image:url('image/login/india_tourism.png');margin-top:45px;height:initial;margin-bottom:275px;margin-left:344px;width:651px;">
+    <p id="para" style="font-size:large;margin-top:28px;color:black">{{ 'TITLE' | translate }}</p>
+     <div ng-hide='session1'>
+         <b style="color:white;">select your language</b>
+    <select  ng-options="language | translate for language in   languages" ng-model="language" ng-change="updateLanguage()">
+        </select></div>
+   
     <div id="div2">
 
         <tr>
@@ -28,7 +32,7 @@
                     <div class="last">
 
 
-
+                           <span  ng-style="style" ng-show="myVar">invalid user name or password</span><br>
                         <button class="button" type="submit" ng-click="submit(mail,password)" style="margin-top:-5px">login </button>
                         <button class="button" ng-click="reg()">New user</button>
                         <br>

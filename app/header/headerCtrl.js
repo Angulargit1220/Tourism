@@ -1,6 +1,7 @@
 var app = angular.module('git');
 app.controller('headerCtrl', function ($scope, $rootScope, $location, $cookies) {
     /*$rootScope.session=true;*/
+   
 
     $scope.logout = function () {
         var cookies = $cookies.getAll();
@@ -9,7 +10,7 @@ app.controller('headerCtrl', function ($scope, $rootScope, $location, $cookies) 
         });
         /* $cookieStore.remove('name');
          $cookieStore.remove('password');*/
-         $rootScope.user = false;
+         $rootScope.headerhide = false;
 
         $location.path("/");
     }
