@@ -1,10 +1,9 @@
-    <div class="jumbotron text-center" ng-controller="detail">
-        
-    <p id="a"><span class="glyphicon glyphicon-align-justify"><a href="#" id="b">Book a ticket</a></span>
-        </p> 
-       
-        
-      <h1>{{place.name}}</h1>       
+   
+ 
+<p id="a" style="position:absolute"><span class="glyphicon glyphicon-align-justify"><h6>ticket</h6></span></p>
+
+<div class="jumbotron text-center" ng-controller="detail">
+     <h1>{{place.name}}</h1>       
       <img src={{place.img_path}} class="img-circle" width="304" height="236"> 
     </div>
 
@@ -16,3 +15,33 @@
       </div>
     </div>
 <div style="height:80px"></div>
+
+
+
+
+
+
+
+<script>
+    $('#a').hover(
+  function () {
+      $(this).animate({
+  width: '70px',
+   
+    },100)
+      $('h6').animate({
+  width: '70px',
+},100)
+  },
+  function () {
+         $(this).animate({
+  width: '11px',
+},100)
+          $('h6').animate({
+  width: '100px',
+},100)
+         
+  }
+);
+
+</script>

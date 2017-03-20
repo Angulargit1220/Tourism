@@ -1,4 +1,4 @@
-var app = angular.module('git', ["ngRoute", "ngCookies"]);
+var app = angular.module('git', ["ngRoute", "ngCookies","ui.bootstrap"]);
 app.config(function ($routeProvider) {
 
     $routeProvider

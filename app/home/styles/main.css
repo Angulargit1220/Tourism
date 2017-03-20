@@ -599,18 +599,56 @@ nav#toc a#toc-actuator {
     width: 34px;
     z-index: 5000
 }
+
 #a{
-    margin-left: 1300px;
-  }
-#b{
-    display:none;
-    margin-left: 1300px;
-    
+    margin-left: 1356px;
+    background-color: #ababab;
+    width:1px;
+    border-radius: 15px;
+    height: 20px;
+    padding: 20px;
+    color: red;
 }
-#a:hover a#b{
+
+#a span{
+    top:-7px;
+    left:-7px;
+}
+h6{
+    margin-left: 1300px;
     display:block;
 }
 
+
+/*.glyphicon {
+    position: relative;
+    top: -7px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ #b{
+     
+        
+width: 10px;
+display: none;
+
+position: absolute;
+top: 16px;
+right: 131px;
+color: #8a8a8a;
+}
+*/
+
+ /*#a:hover #b{
+display:block;
+}
+*/
 @media screen and (max-width:1200px) {
     footer#msf .wrapper {
         margin: 0 30px
