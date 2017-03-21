@@ -3,21 +3,22 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#!home">Tourism.com</a>
         </div>
-        <ul class="nav navbar-nav" ng-show='session' >
-            <li class="active"><a href='#!home'>Home</a></li>                 
+        <ul class="nav navbar-nav" ng-show='session'>
+            <li class="active"><a href='#!home'>Home</a></li>
             <li><a href="#!blog">Blog</a></li>
             <li><a href="#!contactUs">ContactUS</a></li>
             <li><a href="#!about">AboutUs</a></li>
-            
+            <li><a href="#!admin">Admin</a></li>
+
 
         </ul>
-       
+
         <ul class="nav navbar-nav navbar-right" ng-hide='session1'>
             <li><a href="#!registartion"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" ng-show='session'>
-             <li class="active" ng-click="logout()" style="color:#9d9d9d;margin-top: 10px;cu">
+            <li class="active" ng-click="logout()" style="color:#9d9d9d;margin-top: 10px;cu">
                 <span style="cursor:pointer;font-style: inherit;font-size: large;" class="glyphicon glyphicon-log-in"> Logout</span></li>
         </ul>
     </div>

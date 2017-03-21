@@ -1,4 +1,6 @@
+
 var app = angular.module('git', ["ngRoute", "ngCookies", "ngResource", "ab-base64"]);
+
 app.config(function ($routeProvider) {
 
 
@@ -35,5 +37,23 @@ app.config(function ($routeProvider) {
             controller: "detail"
         })
 
+        .when('/admin', {
+            templateUrl: "admin/admin.html",
+        controller: "admin"
+        })
+
 
 });
+
+
+
+app.factory('mongoHomeAPI', function ($resource) {
+    return $resource('/homeapi/homedata:id', {
+        id: '@_id'
+    }, {
+        update: { // We need to define this method manually as it is not provided with ng-resource
+            method: 'PUT'
+        }
+    });
+});
+

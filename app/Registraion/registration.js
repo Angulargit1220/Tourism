@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-app.controller('mycntrl2', function ($scope, $location, $rootScope, User) {
+app.controller('mycntrl2', function ($scope, $location, $rootScope, User,mongoHomeAPI) {
     //User is a factory 
     $scope.User = new User();
     var refresh = function () {
@@ -32,6 +32,7 @@ app.controller('mycntrl2', function ($scope, $location, $rootScope, User) {
                 return false;
             }
         }
+  
         //when the user register it goes here
     $scope.submit = function (user) {
 
