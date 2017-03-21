@@ -31,6 +31,9 @@ app.config(function ($routeProvider) {
             templateUrl: "home/detail.html",
             controller: "detail"
         })
+        .when('/admin', {
+            templateUrl: "admin/admin.html"
+        })
 
 
 });
@@ -45,8 +48,9 @@ app.factory('mongoAPI', function ($resource) {
         }
     });
 });
+
 app.factory('mongoHomeAPI', function ($resource) {
-    return $resource('/homeapi/homedata/:id', {
+    return $resource('/homeapi/homedata:id', {
         id: '@_id'
     }, {
         update: { // We need to define this method manually as it is not provided with ng-resource

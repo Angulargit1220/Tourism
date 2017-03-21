@@ -40,7 +40,7 @@ app.controller('home', function ($scope, $location, $http, $rootScope, $timeout,
     $http.get("/homeapi/homedata")
         .then(function (response) {
             $scope.obj = response.data;
-            console.log('object');
+
             console.log($scope.obj);
         });
 

@@ -11,6 +11,5 @@ var homeSchema = new mongoose1.Schema({
     info: String
 
 });
-console.log('module', module);
 // Return model
 module.exports = restful1.model('home', homeSchema);
