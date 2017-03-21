@@ -7,36 +7,48 @@
  */
 var a = angular.module('git');
 
-a.controller('myCtrl', ['$scope', '$cookies', '$location', '$rootScope', '$cookieStore', 'Database', '$timeout', 'base64', '$translate',function ($scope, $cookies, $location, $rootScope, $cookieStore, Database, $timeout, base64,$translate) {
-    
-     $rootScope.session1 = false;
+a.controller('myCtrl', ['$scope', '$cookies', '$location', '$rootScope', '$cookieStore', 'Database', '$timeout', 'base64','View', 'ViewDatabase', function ($scope, $cookies, $location, $rootScope, $cookieStore, Database, $timeout, base64, View, ViewDatabase) {
+
+    $rootScope.session1 = false;
     $rootScope.session = false;
     $scope.myVar = false;
     var obj;
-    
-    
-       $scope.language='en';
-    $scope.languages = ['en','hindi','russian','kannada','oriya','chineese','french'];
+    var noofviews;
 
-       $scope.updateLanguage = function() {
-            $translate.use($scope.language);
-        };
 
-   
+
+
 
     Database.getNames().then(function (response) {
 
 
         obj = response.data;
-        
+
+
     })
+
+    ViewDatabase.getvalues().then(function (response) {
+
+
+        noofviews = response.data;
+
+
+    })
+    $timeout(function () {
+        console.log(obj);
+        console.log(noofviews);
+         $rootScope.views=noofviews;
+
+    }, 1000)
+   
+
     $timeout(function () {
 
         if (Boolean($cookies.get('id_'))) {
             var cookieid = $cookies.get('id_');
 
             $scope.decoded = base64.decode(cookieid);
-           
+
 
 
 
@@ -47,6 +59,12 @@ a.controller('myCtrl', ['$scope', '$cookies', '$location', '$rootScope', '$cooki
                     $rootScope.headerhide = true;
                     $rootScope.session = true;
                     $rootScope.session1 = true;
+                    var t= noofviews[0]._id
+                        var no = noofviews[0].view
+
+                        noofviews[0].view = no + 1;
+                        console.log(noofviews[0].view);
+                        View.update({ id:t }, {view:noofviews[0].view});
                     $location.path('/home')
 
 
@@ -70,37 +88,50 @@ a.controller('myCtrl', ['$scope', '$cookies', '$location', '$rootScope', '$cooki
         else {
 
             for (z in obj) {
-               
+                   console.log(obj);
+
 
                 if (obj[z].email == $scope.emailid && obj[z].password1 == $scope.password) {
+                 
                     var expireDate = new Date();
 
                     expireDate.setDate(expireDate.getDate() + 1);
-                  
+
 
                     $scope.encoded = base64.encode(obj[z]._id);
 
                     $cookies.id = $scope.encoded;
-                  
+
                     $cookies.put('id_', $cookies.id, {
                         'expires': expireDate
                     });
-
-
-
-                    /*   $cookies.userName = $scope.emailid;
-                       $cookies.password = $scope.password;
-                       $cookies.put('name', $cookies.userName, {
-                           'expires': expireDate
-                       });
-                       $cookies.put('password', $cookies.password, {
-                           'expires': expireDate
-                       });*/
                     $rootScope.headerhide = true;
                     $rootScope.session = true;
                     $rootScope.session1 = true;
-                    $location.path('/home');
-                    break;
+                    if (noofviews == 0) {
+
+                        $scope.View = new View();
+                        var refresh = function () {
+
+                            $scope.View = User.View();
+                            $scope.View = "";
+                        }
+                        var Views = {
+                            view: 1
+                        };
+
+                        View.save(Views);
+                        $location.path('/home');
+                    } else {
+                      var t= noofviews[0]._id
+                        var no = noofviews[0].view
+
+                        noofviews[0].view = no + 1;
+                        console.log(noofviews[0].view);
+                        View.update({ id:t }, {view:noofviews[0].view});
+                        $location.path('/home');
+                        break;
+                    }
                 } else {
 
                     //for invalid user it ll show invalid user and password
@@ -125,4 +156,4 @@ a.controller('myCtrl', ['$scope', '$cookies', '$location', '$rootScope', '$cooki
         $location.path('/registartion');
 
     }
-       }]);
+            }]);

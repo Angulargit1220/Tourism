@@ -8,8 +8,7 @@ app.controller('headerCtrl', function ($scope, $rootScope, $location, $cookies) 
         angular.forEach(cookies, function (v, k) {
             $cookies.remove(k);
         });
-        /* $cookieStore.remove('name');
-         $cookieStore.remove('password');*/
+      
          $rootScope.headerhide = false;
 
         $location.path("/");

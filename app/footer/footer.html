@@ -1,8 +1,6 @@
-
-
- <footer id="msf"  style="bottom:0px;width:100%;margin:0;border-radius:0;z-index:1;background-color:black;opacity:0.8        ;color:white;">
-            <div class="wrapper">
-                <ul id="lets-be-social">
+<footer id="msf"  style="bottom:0px;width:100%;margin:0;border-radius:0;z-index:1;background-color:black;height:71px;opacity:0.8;color:white;" ng-controller="footer">
+            <div class="wrapper row">
+                <ul id="lets-be-social" class="col-md-4">
                     <li>
                         <a href="https://twitter.com/198sevenblog" rel="external" target="_blank" title="Follow 198seven on Twitter">Twitter.</a>
                     </li>
@@ -15,13 +13,11 @@
                     </li>
                 </ul>
                 
-                <div id="legal">
-                	<span>Handcrafted by  &copy; Angular Guys</span>
-                </div>
+                <div class="col-md-4 " style="margin-left:280px">
+                	<span class="glyphicon glyphicon-eye-open">  Number of visitor :{{view}}</span>
+                </div> 
                 
-            </div><!-- wrapper -->
-        </footer><!-- footer -->
-
-    </div>
-   
-</footer>
+                	<span style="margin-left:33px">Handcrafted by  &copy; Angular Guys</span>
+            
+            </div><!-- wrapper -->			
+</footer><!-- footer --> <!--ng-controller='footer'-->

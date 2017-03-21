@@ -17,7 +17,6 @@ var productSchema = new mongoose.Schema({
     email: String,
     phno: Number,
     password1:String
-
 });
 
 // Return model

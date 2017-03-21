@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({
 
 // Routes
 app.use('/api', require('./routes/api'));
+app.use('/viewapi', require('./routes/viewapi'));
 
 
 // Start server

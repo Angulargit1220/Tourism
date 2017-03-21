@@ -15,6 +15,15 @@ app.factory('User', function ($resource) {
         }
     })
 });
+app.factory('View', function ($resource) {
+    return $resource('/viewapi/viewusers1/:id', {
+        id: '@_id'
+    }, {
+        update: {
+            method: 'PUT'
+        }
+    })
+});
 angular.module("git").factory('Database', ['$http', function ($http) {
 
 
@@ -23,4 +32,13 @@ angular.module("git").factory('Database', ['$http', function ($http) {
         return $http.get('/api/users1');
     }
     return dataFactory;
+}]);
+angular.module("git").factory('ViewDatabase', ['$http', function ($http) {
+
+
+    var viewdataFactory1 = {};
+    viewdataFactory1.getvalues = function () {
+        return $http.get('/viewapi/viewusers1');
+    }
+    return viewdataFactory1;
 }]);

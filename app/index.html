@@ -19,7 +19,7 @@
     <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
     <script src="bower_components/angular-utf8-base64/angular-utf8-base64.min.js"></script>
-    <script src="bower_components/angular-translate/angular-translate.js"></script>
+   
 
 
     <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
@@ -41,10 +41,14 @@
     <script src="about/about.js"></script>
     <script src="header/headerCtrl.js"></script>
     <script src="contactus/contanctus.js"></script>
+    <script src="footer/footer.js"></script>
+    <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}</style>
 
 </head>
 
-<body>
+<body ng-cloak>
 
     <div style="postion:relative" ng-include="'header/header.html'"></div>
 

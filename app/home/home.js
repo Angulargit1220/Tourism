@@ -18,6 +18,8 @@ app.controller('home', function ($scope, $location, $http, $rootScope, $timeout)
     $http.get("http://localhost:3000/home")
         .then(function (response) {
             $scope.obj = response.data;
+        console.log($scope.obj);
+        
         });
     $scope.detail = function (obj) {
         console.log(obj);
