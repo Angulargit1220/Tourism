@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-app.controller('mycntrl2', function ($scope, $location, $rootScope, User,mongoHomeAPI) {
+app.controller('mycntrl2', function ($scope, $location, $rootScope, User) {
     //User is a factory 
     $scope.User = new User();
     var refresh = function () {
