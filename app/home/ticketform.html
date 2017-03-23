@@ -1,0 +1,71 @@
+  <div class="form-group" style="margin-bottom:30px" ng-controller="aCtrl">
+   <form style="height:600px" name="myForm">
+    <div class="col-md-4" style="margin-left:46px; margin-top:16px">
+      <label for="name">Name:</label>
+      <input type="text"  name="myInput" class="form-control"  placeholder="Enter Name"style="display: block;width: 108%;height: 34px; padding: 6px 12px;font-size:14px;border-radius:8px" required />
+ </div>
+    
+     <div class="col-md-4" style="margin-left:72px; margin-top:16px">
+      <label for="email">Phone Number:</label>
+      <input type="number" name="myPhone" class="form-control" ng-model="phonenumber" placeholder="Enter Phone Number" ng-maxlength="10" style="display: block;width: 108%;height: 34px; padding: 6px 12px;font-size: 14px;border-radius:8px" required />
+         <div style="color:red" ng-show="myForm.myPhone.$dirty && myForm.myPhone.$invalid">
+        <span ng-show="myForm.myPhone.$error.required">phone number required.</span>
+      <span ng-show="myForm.myPhone.$invalid">Invalid phone number</span>
+        </div>
+    </div>
+    
+      <div class="col-md-4" style="margin-left:44px; margin-top:52px">
+      <label for="email">Email:</label>
+      <input type="email" name="myEmail" class="form-control" ng-model="email" placeholder="Enter email" style="display: block;width: 108%;height: 34px; padding: 6px 12px;font-size: 14px;border-radius:8px" required />
+          <div style="color:red" ng-show="myForm.myEmail.$dirty && myForm.myEmail.$invalid">
+     <span ng-show="myForm.myEmail.$error.required" style="position:absolute">Email is required.</span>
+      <span ng-show="myForm.myEmail.$invalid" style="position:absolute;top:75px">Invalid email address.</span>
+       </div>
+       </div>
+    
+    
+    <div class="col-md-4" style="margin-left:79px; margin-top:52px">
+      <label for="pwd">Password:</label>
+      <input type="password"  name="myPwd" class="form-control" ng-model="pwd" ng-minlength="4" ng-maxlength="10" placeholder="Enter password" style="display:block;width: 108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:8px" required />
+        <div style="color:red" ng-show="myForm.myPwd.$dirty && myForm.myPwd.$invalid">
+     <span ng-show="myForm.myPwd.$error.required">password is required.</span>
+      <span ng-show="myForm.myPwd.$invalid">Invalid password</span> 
+      </div>
+     </div>
+    
+   <div class="col-md-4" style="margin-left:46px; margin-top:52px">
+    <label for="no of members">How many members?</label>
+    <input type="number"  class="form-control" style="display: block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:8px" placeholder="No of members"> 
+    </div>
+    
+    <div class="col-md-4" style="margin-left:80px; margin-top:52px">
+    <label for="no of members">Place:</label>
+    <input type="text" class="form-control"  style="display:block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:8px" placeholder="Place"> 
+    </div>
+    
+    <div class="col-md-4"  style="margin-left:44px; margin-top:52px">
+    <label for="From Date">From Date:</label>
+    <span class="glyphicon glyphicon-calendar" id="c1"></span><input type="text" name="selected_date" id="datepicker" style="display:block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:5px"/>
+   </div>
+    
+    <div class="col-md-4"  style="margin-left:80px; margin-top:52px">
+    <label for="To Date">To Date:</label>
+        <span class="glyphicon glyphicon-calendar" id="c"></span><input type="text" name="selected_date" id="datepicker1"style="display:block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:8px;"/>
+    </div>
+    
+   <button type="button" class="btn btn-primary" style="margin-left:185px;margin-top:43px;padding:-16px;border-radius:8px" ng-disabled="myForm.myEmail.$error.required||myForm.myPwd.$error.required||myForm.myPhone.$error.required" ng-click="click();">Save</button>
+   <button type="button" ng-click="close();" class="btn btn-primary" style="margin-left:37px;margin-top:40px;padding:-16px;border-radius:8px">Cancel</button>
+    
+  </form>
+  </div>
+
+
+
+   <script>
+   $(document).ready(function() {
+   $(function() {
+    $("#datepicker").datepicker();
+    $("#datepicker1").datepicker();
+     });
+       });
+    </script>

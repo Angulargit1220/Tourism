@@ -1,11 +1,15 @@
-   
- 
-<p id="a" style="position:absolute"><span class="glyphicon glyphicon-align-justify"><h6>ticket</h6></span></p>
+<div>
+<p id="a" ng-controller='popup'>
+    <span class="glyphicon glyphicon-align-justify" style="position:relative">
+        <a href="" ng-click="open()"id="b">Book ticket</a>
+    </span>
+</p>
+</div>
 
-<div class="jumbotron text-center" ng-controller="detail">
-     <h1>{{place.name}}</h1>       
+<div class="jumbotron text-center">
+ <h1>{{place.name}}</h1>       
       <img src={{place.img_path}} class="img-circle" width="304" height="236"> 
-    </div>
+</div>
 
     <div class="container">
       <div class="row">
@@ -20,28 +24,24 @@
 
 
 
-
-
 <script>
     $('#a').hover(
   function () {
       $(this).animate({
-  width: '70px',
-   
+  width: '100px',
     },100)
-      $('h6').animate({
-  width: '70px',
+      $('#b').animate({
+  width: '100px',
 },100)
   },
   function () {
          $(this).animate({
   width: '11px',
 },100)
-          $('h6').animate({
-  width: '100px',
+          $('#a').animate({
+  width: '10px',
 },100)
          
   }
 );
-
 </script>

@@ -5,10 +5,6 @@
     text-indent: 10px;
 }
 
-.carousel-caption:hover {
-    background-color: black;
-    opacity: 1;
-}
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -16,29 +12,14 @@
     margin: auto;
 }
 
-<<<<<<< HEAD
+
+
 .carousel-caption {
     background-color: black;
     opacity: 0.5;
 }
-=======
-.carousel-caption{
-	background-color:black;
-	opacity:.5;
-}
 
-<<<<<<< HEAD
 .carousel-caption:hover{
 	background-color:black;
 	opacity:1;
 }
-=======
->>>>>>> 0ff632c7f95e8c949318c39091022246c3e864e8
-
-
- .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
->>>>>>> 39f15aaa24dc8ae0995806c9ec223024455d9843

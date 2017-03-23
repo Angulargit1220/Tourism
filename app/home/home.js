@@ -21,14 +21,15 @@ app.controller('home', function ($scope, $location, $http, $rootScope, $timeout)
         .then(function (response) {
             $scope.obj = response.data;
         });
+    
     $scope.detail = function (obj) {
         console.log(obj);
         
        $timeout(function(){
         $rootScope.$broadcast('eventName', {
             obj: obj
-        },console.log('Broadcasting',console.time('t')));
-        },80);
+        },console.log('Broadcasting',obj));
+        },100);
        $location.path("/detail");
     };
                                                                                   

@@ -602,53 +602,41 @@ nav#toc a#toc-actuator {
 
 #a{
     margin-left: 1356px;
-    background-color: #ababab;
-    width:1px;
-    border-radius: 15px;
+    background-color: black;
+    width:40px;
     height: 20px;
     padding: 20px;
-    color: red;
+    float:right;
+    border-radius:10px;
+
+    /*border-bottom-left-radius: 100px;
+     border-bottom-right-radius: 100px;
+    */
+    }
+
+#b{
+    display:none;
+    margin-top: -23px;
+    margin-left: 18px;
+    text-decoration:none;
+    font-style: italic;
+    color:aqua;
 }
+
+#a:hover #b{
+    display:inline-block;
+    position:fixed;
+    overflow-x:hidden;
+    word-spacing:-10px;
+ }
 
 #a span{
-    top:-7px;
-    left:-7px;
-}
-h6{
-    margin-left: 1300px;
-    display:block;
+    top:-8px;
+    left:-9px;
+     color:white;
 }
 
 
-/*.glyphicon {
-    position: relative;
-    top: -7px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
- #b{
-     
-        
-width: 10px;
-display: none;
-
-position: absolute;
-top: 16px;
-right: 131px;
-color: #8a8a8a;
-}
-*/
-
- /*#a:hover #b{
-display:block;
-}
-*/
 @media screen and (max-width:1200px) {
     footer#msf .wrapper {
         margin: 0 30px
