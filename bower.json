@@ -15,12 +15,13 @@
     "angular-route": "*",
     "jquery": "^3.1.1",
     "bootstrap-css": "^3.3.7",
-
     "angular-cookies": "^1.6.3",
     "angular-resource": "^1.6.3",
     "angular-utf8-base64": "^0.0.5",
     "angular-translate": "^2.15.1"
 
+
+    
   }
 
 }

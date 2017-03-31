@@ -1,3 +1,4 @@
+
 /**
  * Created with JetBrains WebStorm.
  * User: DPanda
@@ -42,3 +43,27 @@ angular.module("git").factory('ViewDatabase', ['$http', function ($http) {
     }
     return viewdataFactory1;
 }]);
+
+app.factory("contactFactory",function($resource){
+    return $resource("/contactApi/data/:id",{
+        id: '@_id'
+    }, {
+        update: {
+            method:'PUT'
+        }
+    })
+});
+
+app.factory('mongoHomeAPI', function ($resource) {
+    return $resource('/homeapi/homedata:id', {
+        id: '@_id'
+    }, {
+        update: { // We need to define this method manually as it is not provided with ng-resource
+            method: 'PUT'
+        }
+    });
+});
+    
+
+
+
