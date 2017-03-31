@@ -3,7 +3,7 @@
 var express=require('express');
 var router=express.Router();
 
-var product=require('../models/user');
+var product=require('../models/contact');
 product.methods(['get','put','post','delete']);
 product.register(router,'/data');
    console.log('hello.......');
