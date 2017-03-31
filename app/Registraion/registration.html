@@ -31,7 +31,7 @@
         <br>
         <input type="password" name="password1" ng-model="user.password1" class="register-input" placeholder=" confirm Password" ng-required/>
         <br>
-        <div ng-show="register.password1.$viewValue != '' && (register.password1.$viewValue != register.password.$viewValue)">Fields do not match!</div>
+         <div ng-show="register.password1.$viewValue != '' && (register.password1.$viewValue != register.password.$viewValue)">Fields do not match!</div>
 
 
         <button type="submit" ng-click="submit(user)" ng-class="button1" ng-style="customStyle.style" data-ng-disabled="checkQuestions(password,user.password1)" class="register-button">Create Account</button>

@@ -1,5 +1,9 @@
-var app = angular.module('git', ["ngRoute", "ngCookies"]);
+
+var app = angular.module('git', ["ngRoute", "ngCookies", "ngResource", "ab-base64"]);
+
 app.config(function ($routeProvider) {
+
+
 
     $routeProvider
         .when('/', {
@@ -16,7 +20,7 @@ app.config(function ($routeProvider) {
         })
 
 
-        .when('/blog', {
+    .when('/blog', {
             templateUrl: "Blog/blog.html",
             controller: "blog"
         })
@@ -25,13 +29,31 @@ app.config(function ($routeProvider) {
             controller: "about"
         })
         .when("/contactUs", {
-            templateUrl: "contactus/contactus.html"
+            templateUrl: "contactus/contactus.html",
+            controller: "contanct"
         })
-        .when('/detail',{
-		   templateUrl:"home/detail.html",
-           controller:"detail"
-		})
-        
-	  
+        .when('/detail', {
+            templateUrl: "home/detail.html",
+            controller: "detail"
+        })
+
+        .when('/admin', {
+            templateUrl: "admin/admin.html",
+        controller: "admin"
+        })
+
+
+});
+
+
+
+app.factory('mongoHomeAPI', function ($resource) {
+    return $resource('/homeapi/homedata:id', {
+        id: '@_id'
+    }, {
+        update: { // We need to define this method manually as it is not provided with ng-resource
+            method: 'PUT'
+        }
+    });
 });
 

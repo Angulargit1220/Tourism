@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html ng-app='git'>
-<head>
-	    <!-- meta tags -->
-		<meta http-equiv='pragma' content="no-cache">
-		<meta name='viewport' content="width=device-width,initial-scale=1">
-		<meta name="keywords" content="ui-router">
-		<meta name="description" content="ui-router example explained here">
-        <!-- meta tags -->
-	
-	
-		<link rel="stylesheet" href="home/styles/main.css">
 
-		<script src="bower_components/jquery/dist/jquery.min.js"></script> 
-		<script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
-		<script src="bower_components/angular/angular.min.js"></script>
-		<script src="bower_components/angular-route/angular-route.min.js"></script>
-		<script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+<head>
+    <!-- meta tags -->
+    <meta http-equiv='pragma' content="no-cache">
+    <meta name='viewport' content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="ui-router">
+    <meta name="description" content="ui-router example explained here">
+    <!-- meta tags -->
+
+
+    <link rel="stylesheet" href="home/styles/main.css">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-utf8-base64/angular-utf8-base64.min.js"></script>
    
 
-		<link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
-		<link rel="stylesheet" href="login/login.css">
-		<link rel="stylesheet" href="Registraion/registartion.css">
-		<link rel="stylesheet" href="main.css">
-		<link rel="stylesheet" href="about/about.css">
-		<link rel="stylesheet" href="Blog/blog.css">
-        <link rel="stylesheet" href="contactus/css/contact.css">
-        
-        <script src="index.js"></script>
-        <script src="home/home.js"></script>
-        <script src="home/detail.js"></script>
-		<script src="login/login.js"></script>
-		<script src="Registraion/registration.js"></script>
-		<script src="Blog/blog.js"></script>
-        <script src="contactus/jqery/contact.js"></script>
-        <script src="about/about.js"></script>
-        <script src="header/headerCtrl.js"></script>
 
-	</head>
 
-	<body>		
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login/login.css">
+    <link rel="stylesheet" href="Registraion/registartion.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="about/about.css">
+    <link rel="stylesheet" href="Blog/blog.css">
+    <link rel="stylesheet" href="contactus/css/contact.css">
+    <link rel="stylesheet" href="admin/admin.css">
 
-		<div style="postion:relative" ng-include="'header/header.html'"></div>
 
-		<div style="postion:relative"  ng-view></div>
-        
-        <div style="postion:relative" ng-include="'footer/footer.html'"></div>
+    <script src="index.js"></script>
+    <script src="home/home.js"></script>
+    <script src="js/app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="home/detail.js"></script>
+    <script src="login/login.js"></script>
+    <script src="Registraion/registration.js"></script>
+    <script src="Blog/blog.js"></script>
+    <script src="contactus/jqery/contact.js"></script>
+    <script src="about/about.js"></script>
+    <script src="header/headerCtrl.js"></script>
+    <script src="contactus/contanctus.js"></script>
+    <script src="footer/footer.js"></script>
+    <script src="admin/admin.js"></script>
+    
+    <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}</style>
 
-	</body>
+</head>
+
+<body ng-cloak>
+
+    <div style="postion:relative" ng-include="'header/header.html'"></div>
+
+    <div style="postion:relative" ng-view></div>
+
+    <div style="postion:relative" ng-include="'footer/footer.html'"></div>
+
+</body>
 
 
 </html>
-

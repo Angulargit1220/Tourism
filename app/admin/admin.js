@@ -1,6 +1,6 @@
-app.controller('about', function ($scope, $location, $rootScope) {
+app.controller('admin', function ($scope, $location, $rootScope) {
     if ($rootScope.headerhide == true) {
-      
+       
 
     } else {
         $location.path("/")
