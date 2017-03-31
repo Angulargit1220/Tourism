@@ -29,7 +29,7 @@ app.use('/homeapi', require('./routes/homeapi'));
 
 // Start server
 var port = process.env.OPENSHIFT_NODEJS_PORT || 9001,
-    ip = process.env.OPENSHIFT_NODEJS_IP || "10.10.10.85";
+    ip = process.env.OPENSHIFT_NODEJS_IP || "localhost";
 
 
 app.listen(port, ip, function () {
