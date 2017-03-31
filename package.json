@@ -14,13 +14,17 @@
   },
   "homepage": "https://github.com/Angulargit1220/Tourism#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "bower": "^1.8.0",
+    "express": "^4.15.2",
     "http-server": "^0.9.0",
-    "json-server": "^0.9.6"
+    "json-server": "^0.9.6",
+    "mongoose": "^4.9.1",
+    "node-restful": "^0.2.6"
   },
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "start": "http-server -a 127.0.0.1 -p 8007 -c-1"
+    "poststart": "server"
   }
 }

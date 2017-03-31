@@ -1,4 +1,4 @@
-var app = angular.module('git', ["ngRoute", "ngCookies"]);
+var app = angular.module('git', ["ngRoute", "ngCookies","ngResource"]);
 app.config(function ($routeProvider) {
 
     $routeProvider
@@ -25,7 +25,8 @@ app.config(function ($routeProvider) {
             controller: "about"
         })
         .when("/contactUs", {
-            templateUrl: "contactus/contactus.html"
+            templateUrl: "contactus/contactus.html",
+            controller:'contactCtrl'
         })
         .when('/detail',{
 		   templateUrl:"home/detail.html",
