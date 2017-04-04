@@ -1,5 +1,5 @@
-  <div class="form-group" style="margin-bottom:30px" ng-controller="aCtrl">
-   <form style="height:600px" name="myForm">
+<div class="form-group" style="margin-bottom:30px" ng-controller="aCtrl">
+   <form style="height:512px" name="myForm">
     <div class="col-md-4" style="margin-left:46px; margin-top:16px">
       <label for="name">Name:</label>
       <input type="text"  name="myInput" class="form-control"  placeholder="Enter Name"style="display: block;width: 108%;height: 34px; padding: 6px 12px;font-size:14px;border-radius:8px" required />
@@ -7,7 +7,7 @@
     
      <div class="col-md-4" style="margin-left:72px; margin-top:16px">
       <label for="email">Phone Number:</label>
-      <input type="number" name="myPhone" class="form-control" ng-model="phonenumber" placeholder="Enter Phone Number" ng-maxlength="10" style="display: block;width: 108%;height: 34px; padding: 6px 12px;font-size: 14px;border-radius:8px" required />
+      <input type="number" name="myPhone" class="form-control" ng-model="phonenumber" placeholder="Enter Phone Number" ng-minlength="10" ng-maxlength="10" style="display: block;width: 108%;height: 34px; padding: 6px 12px;font-size: 14px;border-radius:8px" required />
          <div style="color:red" ng-show="myForm.myPhone.$dirty && myForm.myPhone.$invalid">
         <span ng-show="myForm.myPhone.$error.required">phone number required.</span>
       <span ng-show="myForm.myPhone.$invalid">Invalid phone number</span>
@@ -45,12 +45,12 @@
     
     <div class="col-md-4"  style="margin-left:44px; margin-top:52px">
     <label for="From Date">From Date:</label>
-    <span class="glyphicon glyphicon-calendar" id="c1"></span><input type="text" name="selected_date" id="datepicker" style="display:block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:5px"/>
+    <span class="glyphicon glyphicon-calendar" ></span><input type="text" name="selected_date" id="datepicker" style="display:block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:5px"/>
    </div>
     
     <div class="col-md-4"  style="margin-left:80px; margin-top:52px">
     <label for="To Date">To Date:</label>
-        <span class="glyphicon glyphicon-calendar" id="c"></span><input type="text" name="selected_date" id="datepicker1"style="display:block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:8px;"/>
+        <span class="glyphicon glyphicon-calendar"></span><input type="text" name="selected_date" id="datepicker1"style="display:block;width:108%;height: 34px;padding: 6px 12px;font-size: 14px;border-radius:8px;"/>
     </div>
     
    <button type="button" class="btn btn-primary" style="margin-left:185px;margin-top:43px;padding:-16px;border-radius:8px" ng-disabled="myForm.myEmail.$error.required||myForm.myPwd.$error.required||myForm.myPhone.$error.required" ng-click="click();">Save</button>
@@ -64,8 +64,12 @@
    <script>
    $(document).ready(function() {
    $(function() {
-    $("#datepicker").datepicker();
-    $("#datepicker1").datepicker();
+    $("#datepicker").datepicker({
+	 autoclose: true
+	});
+    $("#datepicker1").datepicker({
+	 autoclose: true
      });
        });
+	   });
     </script>
